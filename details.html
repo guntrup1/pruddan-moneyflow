@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="./img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Montserrat:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pruddan</title>
+</head>
+
+<body class="second-page">
+	<div class="container-second">
+		<div class="secondVideo">
+			<img src="./img/wp2.png">
+		</div>
+
+		<div class="details-title">
+			Залишай заявку на 30 хвилинну консультацію з командою <span>PRUDDAN</span>
+		</div>
+		<p class="details-p">
+			“Як впровадити систему ДІА у свій блог вже зараз”
+		</p>
+
+
+		<div class="form-wrapper">
+			<form class="form" name="form" id="form">
+				<label class="label-title" for="name">1. Твоє ім'я:</label>
+				<input class="input" type="text" placeholder="Ім'я" id="name" name="name" required>
+
+				<label class="label-title" for="instagram">2. Логін в Instagram:</label>
+				<input class="input" type="text" placeholder="Instagram" id="instagram" name="instagram" required>
+
+				<label class="label-title" or="phone">3. Номер телефону:</label>
+				<input class="input" maxlength="13" type="tel" onkeyup="this.value = this.value.replace(/[^\d]/g,'+');"
+					placeholder="+XX (X__) ___-__-__" id="phone" name="phone" required>
+
+				<label class="label-title" for="telegram">4. Логін в Telegram:</label>
+				<input class="input" type="text" placeholder="Telegram" id="telegram" name="telegram" required>
+
+				<label class="label-title" for="niche">5. У якій ніші ти працюєш:</label>
+				<input class="input" type="text" placeholder="Пару слів" id="niche" name="niche" required>
+
+				<label class="motivation" for="motivation">
+					<div class="label-title six-label-title">6. Яка твоя головна мотивація вести блог</div>
+					<label class="radio">
+						<input class="radio-btn" type="radio" id='option' name="question6"
+							value="Зробити-запуск-інфопродукту"> Зробити
+						запуск
+						інфопродукту
+					</label>
+					<label class="radio">
+						<input class="radio-btn" type="radio" id='option' name="question6" value="Залучати-клієнтів">
+						Залучати клієнтів
+					</label>
+					<label class="radio">
+						<input class="radio-btn" type="radio" id='option' name="question6"
+							value="Створити-особистий-бренд">
+						Створити особистий бренд
+					</label>
+					<label class="radio">
+						<input class="radio-btn" type="radio" id='option' name="question6" value="Медійність">
+						Медійність
+					</label>
+					<label class="radio">
+						<input class="radio-btn" type="radio" id='other' name="question6" value="other"> Інше...
+					</label>
+				</label>
+
+				<input type="text" placeholder="Інше" id="motivation" name="motivation" required disabled>
+
+				<label class="result" or="result">
+					<div class="label-title">7. Який результат ти б хотів\ла отримати наступні декілька місяців
+					</div>
+					<label class="radio">
+						<input class="radio-btn" type="radio" name="question7" value="2.000-3.000$"> 2.000 - 3.000$
+					</label>
+					<label class="radio">
+						<input class="radio-btn" type="radio" name="question7" value="3.000-5.000$"> 3.000 - 5.000$
+					</label>
+					<label class="radio">
+						<input class="radio-btn" type="radio" name="question7" value="5.000-10.000$"> 5.000 -
+						10.000$
+					</label>
+					<label class="radio">
+						<input class="radio-btn" type="radio" name="question7" value="10.000-20.000$"> 10.000 -
+						20.000$
+					</label>
+					<label class="radio">
+						<input class="radio-btn" type="radio" name="question7" value="20.000$+"> 20.000$+
+					</label>
+				</label>
+				<label for="pain" class="label-title">8. Напиши головний запит\біль, яку хочеш вирішити у найближчий
+					час</label>
+				<input class="input" type="text" placeholder="Розпиши детальніше" id="pain" name="pain" required>
+
+				<input class="submit-btn" onclick="checkInputs()" type="submit" id='submit' value="приєднатися">
+			</form>
+		</div>
+</body>
+
+<script>
+
+	function checkInputs() {
+
+		var allInputsHaveText = false;
+		for (var i = 0; i < inputElements.length; i++) {
+			var inputValue = inputElements[i].value.trim();
+			if (inputValue === '') {
+				allInputsHaveText = true;
+				break;
+			}
+		}
+		if (allInputsHaveText) {
+		} else {
+			let subbtn = document.getElementById('submit');
+			subbtn.classList.add('access');
+			subbtn.value = 'НАДІСЛАНО !';
+
+		}
+	}
+
+</script>
+<script src="css/main.js"></script>
+<script src="js/form.js"></script>
+
+
+</html>
